@@ -1,0 +1,1 @@
+connection = 'mysql+pymysql://root:root@192.168.56.10:3306/old_house?charset=utf8'
