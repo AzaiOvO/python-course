@@ -174,7 +174,12 @@ def handle_url():
         save_data(datas=houses, connection=connection)
         #每次循环需要等待一段时间,此处设置随机等待10-20秒
         time.sleep(random.randint(10,20))
-
+    #处理重复数据
+    engine = create_engine(connection)
+    sql = '''
+    DELETE FROM `second-hand_houses` where id not in (select t.min_id from (select MIN(id) as min_id from `second-hand_houses` group by link) t);
+    '''
+    engine.execute(sql)
 
 # houses = spider(url)
 # save_data(datas=houses,connection=connection)

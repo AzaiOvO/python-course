@@ -1,0 +1,28 @@
+.div_number {
+    margin-bottom: 10px;
+    display: flex;
+    justify-self: start;
+}
+
+.div_main {
+    display: flex;
+    justify-self: start;
+}
+
+.div_price {
+    margin-bottom: 10px;
+    display: flex;
+    justify-self: start;
+    margin-left: 40%;
+}
+
+.p_number {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5px;
+    white-space: nowrap;
+}
+
+.inputNumber {
+    height: 32px;
+}
